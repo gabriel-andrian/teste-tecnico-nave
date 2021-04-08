@@ -1,19 +1,15 @@
-const { createContext, useContext, useState } = require("react");
+const { createContext, useContext, useState, useEffect } = require("react");
 
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const token = localStorage.getItem("token") || "";
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(true);
   const [userToken, setUserToken] = useState(token);
 
-  // if (token && typeof user !== "number") {
-  //   setUser(jwt_decode(token).user_id);
-  // }
-
-  // useEffect(() => {
-  //   setUserToken(localStorage.getItem("token") || "");
-  // }, [user]);
+  useEffect(() => {
+    setUserToken(localStorage.getItem("token") || "");
+  }, [user]);
 
   return (
     <UserContext.Provider
