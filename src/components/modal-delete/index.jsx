@@ -45,7 +45,7 @@ const DeleteModal = ({ id }) => {
     <>
       <DeleteFilled onClick={showConfirmModal} />
       <ModalStyled
-        style={{ marginTop: "50%" }}
+        style={{ marginTop: "20vh" }}
         title="Excluir Naver"
         visible={visible}
         onOk={handleDelete}
@@ -60,7 +60,7 @@ const DeleteModal = ({ id }) => {
         title="Naver excluído"
         visible={visible2}
         footer={null}
-        style={{ marginTop: "50%" }}
+        style={{ marginTop: "20vh" }}
         maskStyle={{ background: "rgba(0, 0, 0, 0.8)" }}
         onCancel={closeSucessModel}
       >

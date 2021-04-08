@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { navedexAPI } from "../../services/api";
 import { useUser } from "../../providers/user";
 import { dateConvert } from "../../services/dateTime";
+import { FormContainer } from "./style";
 
 const FormUser = ({ type, schema, userInfo = {} }) => {
   const {
@@ -59,7 +60,7 @@ const FormUser = ({ type, schema, userInfo = {} }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleForm)}>
+    <FormContainer onSubmit={handleSubmit(handleForm)}>
       <label>Nome</label>
       <input {...register("name")} />
       <p>{errors.name?.message}</p>
@@ -78,8 +79,8 @@ const FormUser = ({ type, schema, userInfo = {} }) => {
       <label>URL da foto do Naver</label>
       <input {...register("url")} />
       <p>{errors.url?.message}</p>
-      <input type="submit" />
-    </form>
+      <input type="submit" value="Salvar" />
+    </FormContainer>
   );
 };
 

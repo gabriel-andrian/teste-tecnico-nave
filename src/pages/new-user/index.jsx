@@ -1,11 +1,25 @@
 import FormUser from "../../components/form-user";
 import { createUserSchema } from "../../services/schemas";
+import { NewUserContainer, SectionTitle } from "./style";
+import { useHistory } from "react-router-dom";
 
 const NewUser = () => {
+  const history = useHistory();
+
   return (
-    <div>
+    <NewUserContainer>
+      <SectionTitle>
+        <a
+          onClick={() => {
+            history.push("/navers");
+          }}
+        >
+          {"<"}
+        </a>{" "}
+        Adicionar Naver
+      </SectionTitle>
       <FormUser type="create" schema={createUserSchema} />
-    </div>
+    </NewUserContainer>
   );
 };
 

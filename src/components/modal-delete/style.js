@@ -25,6 +25,9 @@ export const ModalStyled = styled(Modal)`
         width: 45%;
         font-size: 1.2rem;
     }
-
-
+    
+    .ant-btn-primary {
+       background-color: rgb(108 97 202);
+       border-color: rgb(108 97 202);
+    }
 `

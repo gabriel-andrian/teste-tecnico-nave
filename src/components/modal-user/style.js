@@ -10,6 +10,7 @@ export const ModalContainer = styled.div`
     display: flex;
     flex-direction: column;
 
+
     img {
         width: 90%;
     }
@@ -32,7 +33,7 @@ export const IconsContainer = styled.div`
 
     div, a {
         font-size: 1.8rem;
-        color: black;
+        color: rgb(108 97 202);
         margin: 0 2%;
         
     }
