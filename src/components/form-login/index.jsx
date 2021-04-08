@@ -3,8 +3,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { navedexAPI } from "../../services/api";
-
+import logo from "../../logo.svg";
 import { useUser } from "../../providers/user";
+import { FormContainer, ImgStyled } from "./style";
 
 const schema = yup.object().shape({
   email: yup.string().required(" O e-mail não pode estar vazio.").email(),
@@ -43,16 +44,17 @@ const FormLogin = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleForm)}>
+    <FormContainer onSubmit={handleSubmit(handleForm)}>
+      <ImgStyled src={logo} alt="logo" />
       <label>E-mail</label>
       <input {...register("email")} placeholder="E-mail" />
       <p>{errors.email?.message}</p>
       <label>Senha</label>
       <input {...register("password")} placeholder="Senha" />
       <p>{errors.password?.message}</p>
-      <input type="submit" />
+      <input type="submit" value="Entrar" />
       <p>{userToken}</p>
-    </form>
+    </FormContainer>
   );
 };
 

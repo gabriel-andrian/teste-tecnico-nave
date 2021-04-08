@@ -3,8 +3,16 @@ import styled from "styled-components"
 
 
 export const ModalStyled = styled(Modal)`
+
     .ant-modal-header{
         border-bottom: none
+    }
+
+    .ant-modal-title{
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
     }
 
     .ant-modal-footer{
@@ -13,7 +21,9 @@ export const ModalStyled = styled(Modal)`
     }
 
     .ant-modal-footer > button {
-        width: 33%
+        height: 30%;
+        width: 45%;
+        font-size: 1.2rem;
     }
 
 

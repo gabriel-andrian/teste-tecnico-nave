@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Modal } from "antd";
 import DeleteModal from "../modal-delete";
 import { EditFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { dateFormat } from "../../services/dateTime";
+import { ModalStyled } from "../modal-delete/style";
+import { IconsContainer, ModalContainer } from "./style";
 
 const UserModal = ({ userInfo }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -22,25 +23,15 @@ const UserModal = ({ userInfo }) => {
 
   return (
     <>
-      <img
-        src="https://www.leadsdeconsorcio.com.br/blog/wp-content/uploads/2019/11/25.jpg"
-        alt="profile"
-        onClick={showModal}
-        width={"20%"}
-      />
-
-      <Modal
+      <img src={userInfo.url} alt="profile" onClick={showModal} width={"20%"} />
+      <ModalStyled
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
         footer={null}
       >
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <img
-            src="https://www.leadsdeconsorcio.com.br/blog/wp-content/uploads/2019/11/25.jpg"
-            alt="profile"
-            width={"50%"}
-          />
+        <ModalContainer>
+          <img src={userInfo.url} alt="profile" width={"50%"} />
           <div>
             <h1>{userInfo.name}</h1>
             <p>{userInfo.job_role}</p>
@@ -50,15 +41,17 @@ const UserModal = ({ userInfo }) => {
             <p>{dateFormat(userInfo.admission_date)}</p>
             <h3>Projetos que participou</h3>
             <p>{userInfo.project}</p>
-            <div onClick={handleCancel}>
-              <DeleteModal id={userInfo.id} />
-            </div>
-            <Link to={`/navers/${userInfo.id}`}>
-              <EditFilled />
-            </Link>
+            <IconsContainer>
+              <div onClick={handleCancel}>
+                <DeleteModal id={userInfo.id} />
+              </div>
+              <Link to={`/navers/${userInfo.id}`}>
+                <EditFilled />
+              </Link>
+            </IconsContainer>
           </div>
-        </div>
-      </Modal>
+        </ModalContainer>
+      </ModalStyled>
     </>
   );
 };

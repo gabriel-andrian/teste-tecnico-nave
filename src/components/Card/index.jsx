@@ -3,10 +3,11 @@ import DeleteModal from "../modal-delete";
 import UserModal from "../modal-user";
 import { EditFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import { CardContainer } from "./style";
 
 const Card = ({ userInfo }) => {
   return (
-    <div>
+    <CardContainer>
       {userInfo.name && <UserModal userInfo={userInfo} />}
       <p>{userInfo.name}</p>
       <p>{userInfo.job_role}</p>
@@ -16,7 +17,7 @@ const Card = ({ userInfo }) => {
           <EditFilled />
         </Link>
       </div>
-    </div>
+    </CardContainer>
   );
 };
 
