@@ -5,7 +5,7 @@ import UsersMap from "../users-map";
 const Users = () => {
   const { loading } = useUsers();
 
-  return <div>{loading ? <h1>LOADING...</h1> : <UsersMap />}</div>;
+  return <>{loading ? <h1>LOADING...</h1> : <UsersMap />}</>;
 };
 
 export default Users;

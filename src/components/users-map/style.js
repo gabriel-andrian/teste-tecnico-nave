@@ -6,5 +6,5 @@ export const UsersContainer = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 `
