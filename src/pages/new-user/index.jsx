@@ -15,7 +15,7 @@ const NewUser = () => {
           }}
         >
           {"<"}
-        </a>{" "}
+        </a>
         Adicionar Naver
       </SectionTitle>
       <FormUser type="create" schema={createUserSchema} />

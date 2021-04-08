@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FormUser from "../../components/form-user";
 import { updateUserSchema } from "../../services/schemas";
 import { useUsers } from "../../providers/users";
 import { useParams, useHistory } from "react-router-dom";
+import { UserUpdateContainer, SectionTitle } from "./style";
 
 const EditUser = () => {
   const { users } = useUsers();
@@ -18,9 +19,19 @@ const EditUser = () => {
   }
 
   return (
-    <div>
+    <UserUpdateContainer>
+      <SectionTitle>
+        <a
+          onClick={() => {
+            history.push("/navers");
+          }}
+        >
+          {"<"}
+        </a>
+        Editar Naver
+      </SectionTitle>
       <FormUser type="update" schema={updateUserSchema} userInfo={user[0]} />
-    </div>
+    </UserUpdateContainer>
   );
 };
 
