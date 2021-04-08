@@ -35,7 +35,7 @@ export const createUserSchema = yup.object().shape({
   });
   
   export const updateUserSchema = yup.object().shape({
-    job_role: yup.string(),
+    job_role: yup.string().min(3, "Cargo deve ter pelo menos três caracteres."),
     admission_date: yup
       .string()
       .matches(
@@ -49,6 +49,6 @@ export const createUserSchema = yup.object().shape({
         "Formato invalido. ex 20/12/1993."
       ),
     project: yup.string(),
-    name: yup.string(),
-    url: yup.string(),
+    name: yup.string().min(3, "Nome deve ter pelo menos três caracteres."),
+    url: yup.string().min(6, "Url deve ter pelo menos cinco caracteres."),
   });

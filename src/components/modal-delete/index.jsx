@@ -4,6 +4,7 @@ import { navedexAPI } from "../../services/api";
 import { useUser } from "../../providers/user";
 import { useUsers } from "../../providers/users";
 import { DeleteFilled } from "@ant-design/icons";
+import SucessModal from "../modal-sucess";
 
 const DeleteModal = ({ id }) => {
   const { userToken } = useUser();
@@ -56,16 +57,13 @@ const DeleteModal = ({ id }) => {
       >
         <p>Tem certeza que deseja excluir este Naver?</p>
       </ModalStyled>
-      <ModalStyled
+      <SucessModal
         title="Naver excluído"
         visible={visible2}
-        footer={null}
-        style={{ marginTop: "20vh" }}
-        maskStyle={{ background: "rgba(0, 0, 0, 0.8)" }}
         onCancel={closeSucessModel}
       >
         <p>Naver excluído com sucesso!</p>
-      </ModalStyled>
+      </SucessModal>
     </>
   );
 };

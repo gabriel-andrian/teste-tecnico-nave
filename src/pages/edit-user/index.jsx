@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import FormUser from "../../components/form-user";
 import { updateUserSchema } from "../../services/schemas";
 import { useUsers } from "../../providers/users";
@@ -8,8 +9,6 @@ const EditUser = () => {
   const { id } = useParams();
   const history = useHistory();
 
-  //  TODO: Trocar para fazer um GET na API com o ID.
-
   const user = users.filter((user) => {
     return user.id === id;
   });
@@ -19,7 +18,7 @@ const EditUser = () => {
   }
 
   return (
-    <div style={{ border: "3px red solid" }}>
+    <div>
       <FormUser type="update" schema={updateUserSchema} userInfo={user[0]} />
     </div>
   );
