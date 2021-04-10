@@ -22,6 +22,15 @@ export const MenuContainer = styled.div`
         color: black;
     }
 
+    @media only screen and (min-width: 600px) {
+        margin: 0 1%;
+
+       a {
+           font-size: 1rem;
+           font-weight: 700;
+       }
+    }
+
 `
 
 export const ImgStyled = styled.img`

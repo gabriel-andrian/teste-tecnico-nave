@@ -5,6 +5,13 @@ export const UserUpdateContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
 
+     @media only screen and (min-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    
+        }
+       
+
 
 `
 
@@ -16,6 +23,6 @@ export const SectionTitle = styled.h1`
     
         a {
             margin-right: 1rem;
-         color:rgb(108 97 202);
+            color:rgb(108 97 202);
         }
 `

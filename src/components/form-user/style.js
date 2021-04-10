@@ -42,5 +42,28 @@ export const FormContainer = styled.form`
         align-self: center;
     }
 
-`
+    @media only screen and (min-width: 600px) {
+        font-size: 1rem;
+        max-height: 1000vh;
+        max-width: 30vw; 
+        margin-left: 1vw;
+        min-height: 40vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        justify-items: center;
 
+        input:last-child {
+            background: rgb(108 97 202);
+            color: white;
+            border: none;
+            height: 3rem;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            margin: 1rem;
+            align-self: center;
+        }
+
+    }
+`

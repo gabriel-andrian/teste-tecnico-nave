@@ -30,4 +30,20 @@ export const ModalStyled = styled(Modal)`
        background-color: rgb(108 97 202);
        border-color: rgb(108 97 202);
     }
+
+
+    @media only screen and (min-width: 600px) {
+        .ant-modal-title{
+            font-size: 1rem;
+        }
+
+        .ant-modal-body{
+            height: 3rem;
+        }
+        p {
+            font-size: 0.9rem;
+            margin-left: 1.3rem;
+        }
+
+    }
 `

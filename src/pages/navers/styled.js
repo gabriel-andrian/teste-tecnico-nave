@@ -27,4 +27,18 @@ export const ContainerContextHeader = styled.div`
 
     }
 
+    @media only screen and (min-width: 600px) {
+        margin-right: 0.5%;
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        button { 
+            width: 20vw;
+            margin-right: 0;
+        }
+    }
+
+
 `
