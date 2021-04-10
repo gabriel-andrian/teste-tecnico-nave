@@ -4,7 +4,7 @@ import { EditFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { dateFormat } from "../../services/dateTime";
 import { ModalStyled } from "../modal-delete/style";
-import { IconsContainer, ModalContainer } from "./style";
+import { IconsContainer, ModalContainer, InfosContainers } from "./style";
 
 const UserModal = ({ userInfo }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -32,7 +32,7 @@ const UserModal = ({ userInfo }) => {
       >
         <ModalContainer>
           <img src={userInfo.url} alt="profile" width={"50%"} />
-          <div>
+          <InfosContainers>
             <h1>{userInfo.name}</h1>
             <p>{userInfo.job_role}</p>
             <h3>Idade</h3>
@@ -49,7 +49,7 @@ const UserModal = ({ userInfo }) => {
                 <EditFilled />
               </Link>
             </IconsContainer>
-          </div>
+          </InfosContainers>
         </ModalContainer>
       </ModalStyled>
     </>

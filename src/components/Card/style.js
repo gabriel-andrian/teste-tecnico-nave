@@ -25,4 +25,19 @@ export const CardContainer = styled.div`
         margin: 0 1%;
     }
 
+    @media only screen and (min-width: 600px) {
+        
+        p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        span, a {
+            font-size: 1rem;
+         }
+
+    }
+
+
+
 `
