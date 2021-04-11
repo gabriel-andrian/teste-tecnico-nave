@@ -3,7 +3,7 @@ import FormUser from "../../components/form-user";
 import { updateUserSchema } from "../../services/schemas";
 import { useUsers } from "../../providers/users";
 import { useParams, useHistory } from "react-router-dom";
-import { UserUpdateContainer, SectionTitle } from "./style";
+import { UserUpdateContainer } from "./style";
 
 const EditUser = () => {
   const { users } = useUsers();
@@ -20,16 +20,6 @@ const EditUser = () => {
 
   return (
     <UserUpdateContainer>
-      <SectionTitle>
-        <a
-          onClick={() => {
-            history.push("/navers");
-          }}
-        >
-          {"<"}
-        </a>
-        Editar Naver
-      </SectionTitle>
       <FormUser type="update" schema={updateUserSchema} userInfo={user[0]} />
     </UserUpdateContainer>
   );
