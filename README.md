@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+<div align="center"><h1 style='color: #6C61CA' ><img src="./public/nave.svg" width='45'>
+Nave.rs - Teste Técnico</h1></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <span>Created by</span> 
+  <p>Gabriel Vieira Andrian</p>
+</div>
 
-## Available Scripts
+<div align="center"> 
+    <img src="https://img.shields.io/github/issues/gabriel-andrian/collections" alt="issues">
+    <img src="https://img.shields.io/github/forks/gabriel-andrian/collections" alt="forks">
+    <img src="https://img.shields.io/github/stars/gabriel-andrian/collections" alt="stars">
+    <img src="https://img.shields.io/github/license/gabriel-andrian/collections" alt="license">    
+</div>
 
-In the project directory, you can run:
+<p align="center">
+ <a href="#-vercel">Vercel</a> •
+ <a href="#-teste">Teste</a> •
+ <a href="#-começando">Começando</a> •
+ <a href="#-tecnologias">Tecnologias</a> •  
+ <a href="#-autor">Autor</a>
+</p>
 
-### `yarn start`
+# ⚛️ Vencel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align="center">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p>Deploy da aplicação no Vercel:</p>
 
-### `yarn test`
+[![Deploy with Vercel](https://vercel.com/button)](https://teste-tecnico-nave.vercel.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
+<br>
 
-### `yarn build`
+# 💻 Teste
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O sistema consiste em uma web app para visualização e criação dos navers, possuindo informações como: nomes, idades, cargos, tempo de empresa e projetos que participou.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O teste inclui:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- páginas:
 
-### `yarn eject`
+  - Login;
+  - Navers;
+  - Adicionar Naver;
+  - Editar Naver;
+  - Página 404 não encontrada;
+  - Página 500 erro no servidor.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Modal:
+  - Detalhes do naver;
+  - Confirmar para deletar;
+  - Confirmar que foi deletado;
+  - COnfirmar que foi atualizado.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# 🚀 Começando
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Esse é um exemplo de como ter uma copia e rodar o projeto localmente. Siga os passos descritos a seguir:
 
-## Learn More
+```bash
+# Clone este repositório
+$ git clone <https://github.com/gabriel-andrian/teste-tecnico-nave>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Acesse a pasta do projeto no terminal/cmd
+$ cd teste-tecnico-nave
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Instale as dependências
+$ yarn install
 
-### Code Splitting
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
-### Analyzing the Bundle Size
+# 🛠 Tecnologias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Ferramentas usadas na construção do projeto:
 
-### Making a Progressive Web App
+- [VSCode](https://code.visualstudio.com/)
+- [Git](https://git-scm.com)
+- [React](https://pt-br.reactjs.org/)
+- [Context](https://pt-br.reactjs.org/docs/context.html)
+- [Styled-Components](https://styled-components.com/)
+- [AntDesign](https://ant.design/)
+- [React-Hook-Form](https://react-hook-form.com/)
+- [Yup](https://github.com/jquense/yup)
+- [Axios](https://github.com/axios/axios)
+- [Vercel](https://vercel.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# 👨🏽‍💻 Autor
 
-### Advanced Configuration
+<div align="center">
+<a href="https://www.linkedin.com/in/gabriel-andrian/"> 
+  <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriel-andrian/"> 
+</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<a href="https://gitlab.com/gabriel_andrian"> 
+  <img src="https://img.shields.io/badge/-GitLab-white?style=flat-square&logo=gitlab&logoColor=white&link=https://gitlab.com/gabriel_andrian"> 
+</a>
+</div>
 
-### Deployment
+## Sobre mim
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Formado em Engenharia de Controle e Automação pela Unicesumar, sempre tive como hobby a área de tecnologia, em 2020 decidi encarar um novo desafio e transformar meu hobby na minha profissão.
 
-### `yarn build` fails to minify
+Atualmente faço um curso super intensivo na Kenzie Academy Brasil de formação de 2000 horas onde estou aprendendo: HTML5, CSS3, JavaScript, Typscript, React, Node JS, Python, Flask, Django, Banco de Dados, entre outras hard skills e soft skills.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sou uma pessoa organizada, pontual, dedicada e empenhada naquilo que decido fazer, com um certo nível autodidata e de resiliência, aprendo com meus erros, conseguindo assim aplicar soluções para projetos futuros.
+Busco uma oportunidade na área de Front-end, em uma empresa colaborativa, com diversidade humana, cultural e com desafios e oportunidades para me desenvolver.
