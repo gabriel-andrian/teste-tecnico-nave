@@ -21,7 +21,7 @@ Nave.rs - Teste Técnico</h1></div>
  <a href="#-autor">Autor</a>
 </p>
 
-# ⚛️ Vencel
+# ⚛️ Vercel
 
 <div align="center">
 
