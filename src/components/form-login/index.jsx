@@ -42,7 +42,7 @@ const FormLogin = () => {
       <input {...register("email")} placeholder="E-mail" />
       <p>{errors.email?.message}</p>
       <label>Senha</label>
-      <input {...register("password")} placeholder="Senha" />
+      <input {...register("password")} placeholder="Senha" type={"password"} />
       <p>{errors.password?.message}</p>
       <input type="submit" value="Entrar" />
       <p>{userToken}</p>
