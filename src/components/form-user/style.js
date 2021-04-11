@@ -1,69 +1,136 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+export const SpanStyled = styled.label`
+     width: 89%;
+     margin: 0 auto;
+     color: red;
+
+     ${({error}) =>             
+              error ?
+              css`
+                 color: red;
+             `
+             : css`
+                 color: rgba(0, 0, 0, 0.85);
+             `
+             }
+
+ `
 
 
-export const FormContainer = styled.form`
-    max-height: 70vh;
-    min-height: 55vh;
-    width: 100%;
+export const ContextContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+` 
+
+export const FormContainer = styled.div`
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+
+    @media only screen and (max-width: 600px) {
+        padding: 0px 15px;
+
+    }
+
+
+`
+
+export const UserDetailsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 5px 10px 5px;
+
+    @media only screen and (max-width: 600px) {
+
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin: 0px 0px;
+
+    }
+
+
+`
+
+export const InputBox = styled.div`
+    width: calc(100% / 2 - 20px);
+    margin: 10px 0 12px 0;
+
+    label{
+        font-weight: 700;
+
+    }
+
+    input { 
+        margin-top: 5px;
+        height: 45px;
+        width: 100%;
+        border: 1px solid black;
+        font-size: 1rem;
+    }
 
     input:focus {
         outline-color: rgb(108 97 202);
     }
 
-    input {
-        margin: 0 auto;
-        width: 89%;
-        border-width: 1px;
-    }
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        margin: 10px 0;
 
-    label {
-        width: 89%;
-        margin: 0 auto
-    }
-
-    p {
-        color: red;
-        width: 90%;
-        margin: 0 auto
-    }
-
-    input:last-child {
-        background: rgb(108 97 202);
-        color: white;
-        border: none;
-        height: 5rem;
-        border-radius: 10px;
-        font-size: 2.5rem;
-        margin: 1rem;
-        align-self: center;
-    }
-
-    @media only screen and (min-width: 600px) {
-        font-size: 1rem;
-        max-height: 1000vh;
-        max-width: 30vw; 
-        margin-left: 1vw;
-        min-height: 40vh;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        justify-items: center;
-
-        input:last-child {
-            background: rgb(108 97 202);
-            color: white;
-            border: none;
-            height: 3rem;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            margin: 1rem;
-            align-self: center;
+        input {
+            height: 40px;
+            font-size: 1.6rem;
+            margin-top: 2px;
         }
 
+        label{
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
     }
+`
+
+export const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    margin: 0;
+
+
+    input{
+        font-size: 1.3rem;
+        height: 3.5rem;
+        width: 25%;
+        color: white;
+        background-color: rgb(108 97 202);
+        cursor: pointer;
+        border: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        flex-direction: row;
+        height: 80px;
+
+        input {
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 15px;
+            font-size: 2rem;
+        }
+    }
+`
+
+export const SectionTitle = styled.h1`
+    width: 100%;
+    font-size: 2rem;
+    margin-left: 1px;
+    color: rgb(108 97 202);
+    
+        a {
+            margin-right: 1rem;
+            color:rgb(108 97 202);
+        }
 `

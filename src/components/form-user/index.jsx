@@ -6,7 +6,15 @@ import { navedexAPI } from "../../services/api";
 import { useUser } from "../../providers/user";
 import { useUsers } from "../../providers/users";
 import { dateConvert } from "../../services/dateTime";
-import { FormContainer } from "./style";
+import {
+  ContextContainer,
+  FormContainer,
+  InputBox,
+  SpanStyled,
+  UserDetailsContainer,
+  ButtonContainer,
+  SectionTitle,
+} from "./style";
 import SucessModal from "../modal-sucess";
 
 const FormUser = ({ type, schema, userInfo = {} }) => {
@@ -79,27 +87,76 @@ const FormUser = ({ type, schema, userInfo = {} }) => {
 
   return (
     <>
-      <FormContainer onSubmit={handleSubmit(handleForm)}>
-        <label>Nome</label>
-        <input {...register("name")} />
-        <p>{errors.name?.message}</p>
-        <label>Idade</label>
-        <input {...register("birthdate")} />
-        <p>{errors.birthdate?.message}</p>
-        <label>Projetos que participou</label>
-        <input {...register("project")} />
-        <p>{errors.project?.message}</p>
-        <label>Cargo</label>
-        <input {...register("job_role")} />
-        <p>{errors.job_role?.message}</p>
-        <label>Tempo de empresa</label>
-        <input {...register("admission_date")} />
-        <p>{errors.admission_date?.message}</p>
-        <label>URL da foto do Naver</label>
-        <input {...register("url")} />
-        <p>{errors.url?.message}</p>
-        <input type="submit" value="Salvar" />
-      </FormContainer>
+      <ContextContainer>
+        <FormContainer>
+          <SectionTitle>
+            <a
+              onClick={() => {
+                history.push("/navers");
+              }}
+            >
+              {"<"}
+            </a>
+            {type === "create" ? "Adicionar Naver" : "Editar Naver"}
+          </SectionTitle>
+          <form id="RegisterForm" onSubmit={handleSubmit(handleForm)}>
+            <UserDetailsContainer>
+              <InputBox>
+                <SpanStyled error={errors.name}>
+                  {errors.name ? errors.name.message : "Nome"}
+                </SpanStyled>
+                <input {...register("name")} placeholder="Nome" />
+              </InputBox>
+              <InputBox>
+                <SpanStyled error={errors.job_role}>
+                  {errors.job_role ? errors.job_role.message : "Cargo"}
+                </SpanStyled>
+                <input {...register("job_role")} placeholder="Cargo" />
+              </InputBox>
+              <InputBox>
+                <SpanStyled error={errors.birthdate}>
+                  {errors.birthdate ? errors.birthdate.message : "Idade"}
+                </SpanStyled>
+                <input {...register("birthdate")} placeholder="Idade" />
+              </InputBox>
+              <InputBox>
+                <SpanStyled error={errors.admission_date}>
+                  {errors.admission_date
+                    ? errors.admission_date.message
+                    : "Tempo de empresa"}
+                </SpanStyled>
+                <input
+                  {...register("admission_date")}
+                  placeholder="Tempo de empresa"
+                />
+              </InputBox>
+              <InputBox>
+                <SpanStyled error={errors.project}>
+                  {errors.project
+                    ? errors.project.message
+                    : "Projetos que participou"}
+                </SpanStyled>
+                <input
+                  {...register("project")}
+                  placeholder="Projetos que participou"
+                />
+              </InputBox>
+              <InputBox>
+                <SpanStyled error={errors.url}>
+                  {errors.url ? errors.url.message : "URL da foto do Naver"}
+                </SpanStyled>
+                <input
+                  {...register("url")}
+                  placeholder="URL da foto do Naver"
+                />
+              </InputBox>
+            </UserDetailsContainer>
+            <ButtonContainer>
+              <input type="submit" value="Salvar" form="RegisterForm" />
+            </ButtonContainer>
+          </form>
+        </FormContainer>
+      </ContextContainer>
       <SucessModal
         title="Naver criado"
         visible={visibleSucessCreate}
