@@ -17,7 +17,7 @@ const Routes = () => {
       <Route path="/navers/new" exact component={NewUser} isPrivate />
       <Route path="/navers" exact component={Navers} isPrivate />
       <Route path="/navers/:id" exact component={EditUser} isPrivate />
-      <Route path="/server-error" exact component={ServerError} />
+      <Route path="/server-error" exact component={ServerError} isPrivate />
       <RouteNotFound>
         <NotFound />
       </RouteNotFound>

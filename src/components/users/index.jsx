@@ -1,8 +1,7 @@
 import React from "react";
 import { useUsers } from "../../providers/users";
 import UsersMap from "../users-map";
-import { LoadingOutlined } from "@ant-design/icons";
-import { Spin, Alert } from "antd";
+import { Spin } from "antd";
 import { LoadingContainer } from "./style";
 
 const Users = () => {
