@@ -5,15 +5,16 @@ import { useUser } from "../../providers/user";
 import { useUsers } from "../../providers/users";
 import { DeleteFilled } from "@ant-design/icons";
 import SucessModal from "../modal-sucess";
+import { useHistory } from "react-router-dom";
 
 const DeleteModal = ({ id }) => {
+  const history = useHistory();
   const { userToken } = useUser();
   const [visible, setConfirmVisible] = useState(false);
   const [visible2, setSucessVisible] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
 
   const { setLoading, loading, update, setUpdate } = useUsers();
-  //   const [modalText, setModalText] = React.useState("Content of the modal");
 
   const showConfirmModal = () => {
     setConfirmVisible(true);
@@ -23,10 +24,13 @@ const DeleteModal = ({ id }) => {
     setConfirmLoading(true);
     const authConfig = { Authorization: `Bearer ${JSON.parse(userToken)}` };
 
-    let response = await navedexAPI.delete(`navers/${id}`, {
-      headers: authConfig,
-    });
-    // TODO: response.status !== 200 retornar page 500
+    let response = await navedexAPI
+      .delete(`navers/${id}`, {
+        headers: authConfig,
+      })
+      .catch((error) => {
+        history.push("/server-error");
+      });
 
     setConfirmVisible(false);
     setSucessVisible(true);

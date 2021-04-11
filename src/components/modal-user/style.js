@@ -96,3 +96,7 @@ export const IconsContainer = styled.div`
         }
     }
 `
+
+export const ImgContainer = styled.div`
+    max-width: 300px; 
+` 

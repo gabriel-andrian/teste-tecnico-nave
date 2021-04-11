@@ -12,6 +12,7 @@ export const CardContainer = styled.div`
         width: 100%;
         max-height: 50vh;
         cursor: pointer;
+        min-height: 50vh;
 
     }
 
