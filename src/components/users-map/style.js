@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Empty } from "antd";
 
 
 export const UsersContainer = styled.div`
@@ -15,4 +16,12 @@ export const UsersContainer = styled.div`
     }
 
 
+`
+
+
+export const EmptyStled = styled(Empty)` 
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 60vh;
 `

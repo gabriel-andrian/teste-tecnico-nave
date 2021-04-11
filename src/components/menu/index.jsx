@@ -18,6 +18,7 @@ const Menu = () => {
       {userToken && (
         <MenuContainer>
           <img
+            style={{ cursor: "pointer" }}
             src={logo}
             alt="NaveLogo"
             onClick={() => history.push("/navers")}
