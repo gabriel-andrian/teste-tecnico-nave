@@ -2,7 +2,6 @@ import React from "react";
 import { Result, Button } from "antd";
 import { useHistory } from "react-router-dom";
 import { ContainerError } from "./style";
-import { HistoryOutlined } from "@ant-design/icons";
 
 const ServerError = () => {
   const history = useHistory();
