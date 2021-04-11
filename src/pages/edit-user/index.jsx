@@ -1,14 +1,14 @@
+import React from "react";
 import FormUser from "../../components/form-user";
 import { updateUserSchema } from "../../services/schemas";
 import { useUsers } from "../../providers/users";
 import { useParams, useHistory } from "react-router-dom";
+import { UserUpdateContainer } from "./style";
 
 const EditUser = () => {
   const { users } = useUsers();
   const { id } = useParams();
   const history = useHistory();
-
-  //  TODO: Trocar para fazer um GET na API com o ID.
 
   const user = users.filter((user) => {
     return user.id === id;
@@ -19,9 +19,9 @@ const EditUser = () => {
   }
 
   return (
-    <div style={{ border: "3px red solid" }}>
+    <UserUpdateContainer>
       <FormUser type="update" schema={updateUserSchema} userInfo={user[0]} />
-    </div>
+    </UserUpdateContainer>
   );
 };
 

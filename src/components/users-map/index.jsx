@@ -2,6 +2,7 @@ import React from "react";
 import { useUsers } from "../../providers/users";
 import Card from "../Card";
 import { Empty } from "antd";
+import { UsersContainer } from "./style";
 
 const UsersMap = () => {
   const { users } = useUsers();
@@ -10,11 +11,11 @@ const UsersMap = () => {
     return <Empty />;
   }
   return (
-    <div>
+    <UsersContainer>
       {users.map((user) => {
         return <Card userInfo={user} key={user.id} />;
       })}
-    </div>
+    </UsersContainer>
   );
 };
 

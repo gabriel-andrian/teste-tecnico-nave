@@ -1,10 +1,11 @@
 import FormLogin from "../../components/form-login";
+import { LoginContainer } from "./style";
 
 const Login = () => {
   return (
-    <div>
+    <LoginContainer>
       <FormLogin />
-    </div>
+    </LoginContainer>
   );
 };
 

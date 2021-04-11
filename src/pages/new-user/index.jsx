@@ -1,11 +1,15 @@
 import FormUser from "../../components/form-user";
 import { createUserSchema } from "../../services/schemas";
+import { NewUserContainer } from "./style";
+import { useHistory } from "react-router-dom";
 
 const NewUser = () => {
+  const history = useHistory();
+
   return (
-    <div>
+    <NewUserContainer>
       <FormUser type="create" schema={createUserSchema} />
-    </div>
+    </NewUserContainer>
   );
 };
 
